@@ -51,7 +51,7 @@ allocator.destroy(obj);
 
 ## Notes
 
-This project is intentionally minimal in scope and focused on learning and system-level understanding rather than being a production-ready general-purpose allocator. Also, the very library-like aspect with `exotic::memory` is simply because it looks more professional :)
+This project is intentionally minimal in scope and focused on learning and system-level understanding rather than being a production-ready general-purpose allocator. Also, the very library-like aspect with `exotic::memory` is simply because it looks cooler and more professional :)
 
 ## License
 

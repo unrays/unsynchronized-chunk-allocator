@@ -1,6 +1,6 @@
 # Unsynchronized Chunk Allocator
 
-This project is part of the **EXOTIC::memory** library.
+A C++ unsynchronized chunk-based memory allocator with monotonic allocation strategy for high-performance workloads. This project is part of the **EXOTIC::memory** library.
 
 ## Overview
 

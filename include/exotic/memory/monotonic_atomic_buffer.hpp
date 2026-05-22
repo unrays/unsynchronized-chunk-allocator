@@ -1,20 +1,13 @@
-//===-- monotonic_atomic_buffer.h -------------------------------*- C++ -*-===//
-//
-// Part of the Prysma Project, under the GNU GPL v3.0 or later.
-// See LICENSE at the project root for license information.
-// SPDX-License-Identifier: GPL-3.0-or-later WITH Prysma-exception-1.0
-//
-//===----------------------------------------------------------------------===//
+// Copyright (c) May 2026 Félix-Olivier Dumas. All rights reserved.
+// Licensed under the terms described in the LICENSE file
 
 #pragma once
 
 #include "memory_resource.hpp"
-#include "compiler/macros/prysma_nodiscard.h"
-#include "compiler/macros/prysma_unlikely.h"
 #include <atomic>
 #include <cstddef>
 
-namespace prysma {
+namespace exotic::memory {
 
 struct monotonic_atomic_buffer : public prysma::memory_resource {
 public:
@@ -58,8 +51,8 @@ protected:
     }
 
 public:
-    PRYSMA_NODISCARD constexpr std::size_t capacity() const noexcept { return capacity_; }
-    PRYSMA_NODISCARD std::size_t size() const noexcept { return offset_.load(std::memory_order_relaxed); }
+    [[nodiscard]] constexpr std::size_t capacity() const noexcept { return capacity_; }
+    [[nodiscard]] std::size_t size() const noexcept { return offset_.load(std::memory_order_relaxed); }
 
 private:
     std::byte* buffer_;

@@ -9,7 +9,7 @@
 
 namespace exotic::memory {
 
-struct monotonic_atomic_buffer : public prysma::memory_resource {
+struct monotonic_atomic_buffer : public memory_resource {
 public:
     explicit monotonic_atomic_buffer(std::size_t p_capacity)
         : capacity_(p_capacity)
